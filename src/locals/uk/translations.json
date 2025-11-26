@@ -1,0 +1,136 @@
+{
+  "header": {
+    "appName": "Steam Tracker",
+    "login": "Увійдіть за допомогою Steam",
+    "navFriends": "Мої друзі",
+    "navGames": "Ігри"
+  },
+  "gamesPage": {
+    "title": "Пошук ігор у Steam.",
+    "subtitle": "Введи назву гри або її частину, щоб знайти потрібний проєкт у Steam та подивитись основну інформацію про нього.",
+    "placeholder": "Наприклад: Counter-Strike, Dota, Cyberpunk...",
+    "searchButton": "Пошук",
+    "error": "Сталася помилка при завантаженні ігор. Спробуй ще раз пізніше.",
+    "notFoundTitle": "Ігор за цим запитом не знайдено",
+    "notFoundDescription": "Перевір написання назви гри або спробуй інший запит. Також можеш змінити мову чи регіон, щоб знайти більше результатів у Steam.",
+    "details": "Детальніше",
+    "appId": "AppID:"
+  },
+  "main": {
+    "login": "Увійдіть за допомогою Steam",
+    "badge": "Steam Tracker",
+    "welcomeGuestPrefix": "Вітаю у",
+    "welcomeGuestSuffix": ".",
+    "welcomeUserPrefix": "Вітаю,",
+    "welcomeUserSuffix": ".",
+    "descriptionGuest": "Увійди через Steam у верхньому правому куті, щоб відстежувати свої ігри, аналізувати час у грі та бачити активність друзів.",
+    "descriptionUser": "Продовжуй досліджувати свої ігри, перевіряй активність друзів і відкривай нову статистику про свій Steam-акаунт.",
+    "features": {
+      "statsTitle": "Статистика ігор",
+      "statsDescription": "Дивись, у які ігри витрачаєш найбільше часу, і відстежуй свій прогрес.",
+      "friendsTitle": "Стан друзів",
+      "friendsDescription": "Хто онлайн, у що грають і коли востаннє були в мережі.",
+      "uiTitle": "Зручний інтерфейс",
+      "uiDescription": "Лаконічний інтерфейс без зайвого шуму – тільки корисна інформація."
+    }
+    },
+  "footer": {
+    "mainText":"© {{year}} Steam Friend Tracker · Створено в навчальних цілях."
+  },
+  "profile": {
+    "loadErrorTitle": "Не вдалося завантажити профіль",
+    "loadErrorDesc": "Можливо, токен прострочений або ви не увійшли.",
+    "notLoadedTitle": "Профіль не завантажено",
+    "notLoadedDesc": "Дані не прийшли з /steam/me.",
+    "stateUnknown": "Невідомо",
+    "tooltipOnline": "Онлайн",
+    "tooltipOffline": "Офлайн",
+
+    "labels": {
+      "steamId": "SteamID:",
+      "country": "Країна:",
+      "currentGame": "Зараз в грі:",
+      "appId": "AppID:",
+      "offline": "Офлайн",
+      "notInGame": "Не в грі"
+    },
+
+    "buttons": {
+      "viewSteamProfile": "Steam профіль",
+      "logout": "Вийти"
+    },
+
+    "stats": {
+      "trackerSince": "Користувач трекера з",
+      "steamCreated": "Обліковий запис Steam створено",
+      "lastSeen": "Востаннє онлайн"
+    },
+
+    "summary": {
+      "title": "Зведення",
+      "status": "Статус",
+      "online": "Онлайн",
+      "onlineYes": "Так",
+      "onlineNo": "Ні",
+      "country": "Країна"
+    },
+
+    "activity": {
+      "title": "Активність",
+      "nowPlayingHeading": "Зараз грає",
+      "noSession": "Немає активної сесії."
+    }
+  },
+  "gameDetails": {
+    "loading": "Завантаження деталей гри…",
+
+    "loadErrorTitle": "Сталася помилка при завантаженні інформації про гру.",
+    "loadErrorDescription": "Спробуй пізніше або перевір підключення до мережі.",
+    "noHeaderImage": "Немає зображення",
+    "notFoundTitle": "Деталі гри не знайдено",
+    "notFoundDescription": "Не вдалося завантажити детальну інформацію про цю гру. Перевір AppID в адресному рядку або спробуй пізніше.",
+    "backButton": "Назад",
+
+    "freeToPlay": "Free to Play",
+    "ageNoLimit": "Без вікових обмежень",
+    "minRequirementsMissing": "Інформація про мінімальні вимоги недоступна.",
+
+    "labels": {
+      "release": "Реліз:",
+      "developer": "Розробник:",
+      "publisher": "Видавець:",
+      "platforms": "Платформи:",
+      "age": "Вік:",
+      "website": "Сайт:",
+      "pcRequirements": "Системні вимоги (PC)",
+      "macRequirements": "macOS",
+      "linuxRequirements": "Linux",
+      "supportedLanguages": "Підтримувані мови"
+    },
+
+    "sections": {
+      "description": "Опис гри",
+      "details": "Детальніше про гру",
+      "screenshots": "Скріншоти"
+    },
+    "screenshots": {
+      "counter": "Зображення {{current}} з {{total}}",
+      "close": "Закрити",
+      "prev": "Попередній",
+      "next": "Наступний",
+      "notFound": "Зображення не знайдено"
+    }
+  },
+  "notFoundPage": {
+    "badge": "Steam Friend Tracker",
+    "title": "Сторінку не знайдено",
+    "description": "На жаль, сторінка, яку ви шукаєте, не існує або була переміщена. Перевірте URL або поверніться на головну.",
+    "buttonPrimary": "Повернутись на головну",
+    "tip": "Порада: якщо ви прийшли із закладки або старого посилання — спробуйте відкрити головну сторінку та перейти далі через навігацію.",
+    "errorCodeLabel": "Код помилки:",
+    "errorCodeValue": "NOT_FOUND"
+  }
+
+}
+
+

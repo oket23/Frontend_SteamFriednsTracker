@@ -1,22 +1,27 @@
-import type { FC, PropsWithChildren } from "react";
-import Header from "./Header";
+import {type FC, type PropsWithChildren} from "react";
+import Header from "@components/layout/Header.tsx";
+import { useTranslation } from "react-i18next";
 
 const Layout: FC<PropsWithChildren> = ({ children }) => {
+    const { t } = useTranslation()
+    const year = new Date().getFullYear();
+
     return (
-        <div className="min-h-screen flex flex-col bg-gradient-to-br from-slate-950 via-slate-900 to-sky-950 text-slate-100">
+        <div className="">
             <Header />
 
-            <main className="flex-1 w-full">
+            <main className="flex-1">
                 {children}
             </main>
 
-            <footer className="border-t border-white/10 bg-slate-950/90 py-4 text-center text-[11px] text-slate-400/80 backdrop-blur-xl text-sm">
+            <footer className="border-t border-white/10 bg-slate-950/90 py-4 text-center text-[11px] text-slate-400/80 backdrop-blur-xl">
                 <p className="tracking-wide">
-                    © 2025 Todo App · Created for educational purposes.
+                    {t("footer.mainText", { year })}
                 </p>
             </footer>
         </div>
     );
+
 };
 
 export default Layout;

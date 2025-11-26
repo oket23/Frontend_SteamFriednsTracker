@@ -1,0 +1,135 @@
+{
+  "header": {
+    "appName": "Steam Tracker",
+    "login": "Login with Steam",
+    "navFriends": "My friends",
+    "navGames": "Games"
+  },
+  "gamesPage": {
+    "title": "Search games on Steam.",
+    "subtitle": "Enter the name of a game or part of it to find the project on Steam and view its basic information.",
+    "placeholder": "For example: Counter-Strike, Dota, Cyberpunk...",
+    "searchButton": "Search",
+    "error": "An error occurred while loading games. Please try again later.",
+    "notFoundTitle": "No games found for this query",
+    "notFoundDescription": "Check the spelling of the game name or try another query. You can also change the language or region to find more results on Steam.",
+    "details": "Details",
+    "appId": "AppID:"
+  },
+  "main": {
+    "login": "Login with Steam",
+    "badge": "Steam Tracker",
+    "welcomeGuestPrefix": "Welcome to",
+    "welcomeGuestSuffix": ".",
+    "welcomeUserPrefix": "Welcome,",
+    "welcomeUserSuffix": ".",
+    "descriptionGuest": "Log in with Steam in the top right corner to track your games, analyze playtime, and see your friends' activity.",
+    "descriptionUser": "Keep exploring your games, check your friends' activity, and discover new insights about your Steam account.",
+    "features": {
+      "statsTitle": "Game statistics",
+      "statsDescription": "See which games you spend the most time in and track your progress.",
+      "friendsTitle": "Friends status",
+      "friendsDescription": "See who is online, what they are playing, and when they were last active.",
+      "uiTitle": "Clean interface",
+      "uiDescription": "A minimal interface without unnecessary noise – only useful information."
+    }
+  },
+  "footer": {
+    "mainText":"© {{year}} Steam Friend Tracker · Created for educational purposes."
+  },
+  "profile": {
+    "loadErrorTitle": "Failed to load profile",
+    "loadErrorDesc": "The token may be expired or you are not logged in.",
+    "notLoadedTitle": "Profile not loaded",
+    "notLoadedDesc": "No data was returned from /steam/me.",
+    "stateUnknown": "Unknown",
+    "tooltipOnline": "Online",
+    "tooltipOffline": "Offline",
+
+    "labels": {
+      "steamId": "SteamID:",
+      "country": "Country:",
+      "currentGame": "Currently in game:",
+      "appId": "AppID:",
+      "offline": "Offline",
+      "notInGame": "Not in game"
+    },
+
+    "buttons": {
+      "viewSteamProfile": "Steam profile",
+      "logout": "Logout"
+    },
+
+    "stats": {
+      "trackerSince": "Tracker user since",
+      "steamCreated": "Steam account created",
+      "lastSeen": "Last seen"
+    },
+
+    "summary": {
+      "title": "Summary",
+      "status": "Status",
+      "online": "Online",
+      "onlineYes": "Yes",
+      "onlineNo": "No",
+      "country": "Country"
+    },
+
+    "activity": {
+      "title": "Activity",
+      "nowPlayingHeading": "Now playing",
+      "noSession": "No active session."
+    }
+  },
+  "gameDetails": {
+    "loading": "Loading game details…",
+
+    "loadErrorTitle": "An error occurred while loading game details.",
+    "loadErrorDescription": "Please try again later or check your network connection.",
+    "noHeaderImage": "No image",
+    "notFoundTitle": "Game details not found",
+    "notFoundDescription": "We could not load detailed information for this game. Check the AppID in the address bar or try again later.",
+    "backButton": "Go back",
+
+    "freeToPlay": "Free to Play",
+    "ageNoLimit": "No age restrictions",
+    "minRequirementsMissing": "Minimum system requirements information is not available.",
+
+    "labels": {
+      "release": "Release:",
+      "developer": "Developer:",
+      "publisher": "Publisher:",
+      "platforms": "Platforms:",
+      "age": "Age:",
+      "website": "Website:",
+      "pcRequirements": "System requirements (PC)",
+      "macRequirements": "macOS",
+      "linuxRequirements": "Linux",
+      "supportedLanguages": "Supported languages"
+    },
+
+    "sections": {
+      "description": "Game description",
+      "details": "More about the game",
+      "screenshots": "Screenshots"
+    },
+    "screenshots": {
+      "counter": "Image {{current}} of {{total}}",
+      "close": "Close",
+      "prev": "Previous",
+      "next": "Next",
+      "notFound": "Image not found"
+    }
+  },
+  "notFoundPage": {
+    "badge": "Steam Friend Tracker",
+    "title": "Page not found",
+    "description": "The page you are looking for does not exist or has been moved. Please check the URL or go back to the home page.",
+    "buttonPrimary": "Back to home",
+    "tip": "Tip: if you came here from a bookmark or an old link, try opening the home page and navigating from there.",
+    "errorCodeLabel": "Error code:",
+    "errorCodeValue": "NOT_FOUND"
+  }
+
+
+}

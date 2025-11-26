@@ -36,7 +36,7 @@ const useModal = (isScroll: boolean = false): ModalProps => {
 
     const handleCloseModal = () => {
         setAnimation('out');
-        setTimeout(() => setIsOpen(false), 300);
+        setTimeout(() => setIsOpen(false), 250);
     }
 
     useEffect(() => {

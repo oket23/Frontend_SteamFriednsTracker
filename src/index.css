@@ -14,12 +14,12 @@ body {
     font-size: var(--font-size-base);
 }
 html{
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* старий Edge/IE */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 html::-webkit-scrollbar {
-    display: none;         /* Chrome/Edge/Safari */
+    display: none;
 }
 
 .accent-text {
