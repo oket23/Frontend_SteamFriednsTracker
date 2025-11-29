@@ -1,92 +1,136 @@
-# React + TypeScript + Vite
+# Steam Friends Tracker — Frontend Client 🖥️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![React](https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=flat-square&logo=typescript)
+![Vite](https://img.shields.io/badge/Vite-Bundler-646CFF?style=flat-square&logo=vite)
+![Tailwind](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?style=flat-square&logo=tailwind-css)
 
-Currently, two official plugins are available:
+The modern, responsive web interface for the **Steam Friends Tracker** platform. Built with **React** and **TypeScript**, it provides a real-time dashboard to monitor friends' activity, search for games, and view detailed Steam profiles.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ✨ Key Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* **Real-Time Dashboard:** Live updates of friends' statuses (Online, Offline, In-Game) using **SignalR** WebSocket connection.
+* **Steam Integration:** Secure login via **Steam OpenID** (handled via API).
+* **Smart Caching:** deeply integrated **TanStack Query** (React Query) for caching API responses, minimizing network requests, and handling loading/error states.
+* **Global State Management:** Uses **Zustand** for lightweight client-side state (filters, search queries, UI preferences).
+* **Game Catalog:** Search interface with filtering by region and language, leveraging localized Steam store data.
+* **Internationalization (i18n):** Full support for multiple languages (English & Ukrainian).
+* **Responsive Design:** Mobile-first UI built with **Tailwind CSS**.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠 Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+| Category | Technology | Purpose |
+| :--- | :--- | :--- |
+| **Core** | React 18, TypeScript | Component-based UI Architecture. |
+| **Build Tool** | Vite | Lightning-fast HMR and bundling. |
+| **State (Server)** | TanStack Query v5 | Async state management, caching, and synchronization. |
+| **State (Client)** | Zustand | Global store for filters and auth state. |
+| **Real-time** | @microsoft/signalr | WebSocket client for receiving live updates. |
+| **Styling** | Tailwind CSS | Utility-first CSS framework. |
+| **HTTP Client** | Axios | API requests with interceptors for JWT injection. |
+| **Localization** | i18next | Translation management. |
+| **Icons** | Lucide React | Modern, lightweight icon set. |
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🚀 Getting Started
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Prerequisites
+* [Node.js](https://nodejs.org/) (v18 or higher)
+* [npm](https://www.npmjs.com/) or yarn
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 1. Installation
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Clone the repository and install dependencies:
 
-## How to Run the Project
-
-Follow these steps to set up and run the project locally:
-
-### Clone the repository
 ```bash
-git clone https://github.com/oket23/React_Vite_Template
-cd react_app # Or your project's root directory
-```
-
-### Install dependencies
-Make sure you have Node.js (v18 or higher) installed.
-Then run:
-```bash
+git clone https://github.com/oket23/Frontend_SteamFriednsTracker
+cd frontend-steam-friends-tracker
 npm install
 ```
 
-### Start the development server
+### 2. Environment Configuration
+
+Create a `.env` file in the root directory. You can use the provided example file as a template:
+
+```bash
+cp .env.example .env
+```
+
+**Required Variables:**
+
+```ini
+# URL of your Gateway API (Backend)
+VITE_SERVER_URL=https://localhost:5001
+```
+
+### 3. Running Locally
+
+Start the development server with Hot Module Replacement (HMR):
+
 ```bash
 npm run dev
 ```
-Once it’s running, open your browser and visit the local URL provided in your terminal (usually http://localhost:5173/).
+
+The application will be available at `http://localhost:5173`.
+
+## 📂 Project Structure
+
+The project follows a feature-based folder structure for scalability and maintainability:
+
+```text
+src/
+├── assets/             # Static assets (images, global styles)
+├── common/             # Shared UI components (Portals, Modals)
+├── components/         # Global layout components (Header, Sidebar)
+├── config/             # App configuration (API endpoints, Router, i18n)
+├── helpers/            # Utility functions (Date formatting, CSS merging)
+├── hooks/              # Global custom hooks (useDebounce, useModal)
+├── locals/             # Translation JSON files (en, uk)
+├── providers/          # React Context Providers (QueryClient, Auth)
+├── screens/            # Page views (Feature modules)
+│   ├── auth/           # Login & Callback logic
+│   ├── friends/        # Friends list & Real-time logic
+│   ├── games/          # Game search & catalog
+│   ├── game-details/   # Single game view
+│   └── profile/        # User profile view
+├── services/           # API service layer (Axios calls)
+├── store/              # Zustand stores (useAuthStore, useGamesStore)
+├── types/              # TypeScript interfaces & types
+└── ui/                 # Reusable UI kit (Buttons, Inputs, Pagination)
+```
+
+## 🧩 Key Architecture Concepts
+
+### Data Fetching Strategy
+We strictly separate **Server State** from **Client State**:
+* **Server State:** Handled by **TanStack Query** (`useFriendsQuery`, `useGamesQuery`). It manages caching, background refetching, and stale-while-revalidate logic.
+* **Client State:** Handled by **Zustand** (`useGamesStore`, `useAuthStore`). It holds synchronous UI state like search inputs, active filters, and session tokens.
+
+### Real-Time Updates
+The application establishes a **SignalR** connection directly within the `useFriendsQuery` hook.
+1. When the backend detects a status change (e.g., a friend starts playing *Dota 2*), it pushes a new snapshot.
+2. The frontend receives this event and instantly updates the React Query cache via `queryClient.setQueryData`.
+3. The UI re-renders automatically without triggering a new HTTP request.
+
+## 📦 Building for Production
+
+To create an optimized production build:
+
+```bash
+npm run build
+```
+
+The output will be generated in the `dist/` directory, ready to be served by Nginx, Apache, or Docker.
+
+## 🔗 Related Projects
+
+- Backend API: https://github.com/oket23/Backend_SteamFriendsTracker
+
+## 📜 License
+
+This project is licensed under the MIT License.
+
+
+
+
